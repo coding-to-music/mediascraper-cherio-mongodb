@@ -3,6 +3,11 @@ import { configs } from "./configs";
 import { IConfigs } from "./domain/IConfigs";
 require("dotenv").config();
 
+var MONGODB_URI =
+  process.env.MONGODB_URI || "mongodb://localhost/mern-classroom";
+
+console.log("MONGODB_URI", MONGODB_URI);
+
 class Database {
   private readonly _config: IConfigs;
   private readonly _mongo: Mongoose;
@@ -27,7 +32,7 @@ class Database {
     const db: Connection = this._mongo.connection;
     db.on("error", console.error.bind(console, "connection error:"));
     db.once("open", () => {
-      console.log("connected");
+      console.log("database is connected");
     });
     return mongoose;
   }
