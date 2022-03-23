@@ -1,6 +1,6 @@
 # Mediascraper - Node MongodDB React Express Cherio Scraper
 
-https://github.com/coding-to-music/mediascraper-cherio-react-express
+https://github.com/coding-to-music/mediascraper-cherio-mongodb
 
 By Vu Phan https://github.com/vuphanse
 
